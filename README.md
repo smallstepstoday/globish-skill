@@ -99,6 +99,10 @@ echo "Your draft text here." | python3 skills/globish/scripts/check_globish.py -
 - The idiom list (`skills/globish/scripts/idioms.txt`) is a starter set of common offenders, not exhaustive. Contributions welcome.
 - The sentence splitter can be thrown off by punctuation directly inside quotation marks (e.g., a sentence ending `word."` rather than `word.` followed by a space) — a known quirk, tracked for a future fix.
 
+## Privacy
+
+This plugin collects no data and makes no network calls. Everything it does — checking vocabulary, sentence length, tense patterns, and idioms — runs locally against files already open in the session, using only the Python standard library. There are no MCP connectors, no telemetry, no external services, and no analytics of any kind. Nothing here reads, stores, or transmits information beyond the document Claude is already working on.
+
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE). The Globish vocabulary itself is Jean-Paul Nerrière's work (2004); this repository packages an independent reconstruction of the word list plus original tooling and documentation around it, and claims no rights over "Globish" as a term or method.
