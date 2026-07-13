@@ -57,6 +57,8 @@ See [`examples/before_after.md`](examples/before_after.md) for a full worked exa
 
 When installed as a plugin, `hooks/check_globish_on_write.py` runs as a `PostToolUse` hook after every `Write` or `Edit` tool call. If the file is prose (`.md`, `.markdown`, `.txt`, `.mdx`) and isn't part of the plugin's own bundled reference material, it runs the same compliance check automatically and prints a short summary — off-list word count, long-sentence count, forbidden-tense hits, idiom hits — so Claude sees it in the same turn and can offer to fix what's flagged. Clean files produce no output. Like the checker itself, the hook only reports; it never blocks the write.
 
+Hooks only run in Claude Code and Cowork — plugins also install in plain Chat (web or the Claude Desktop chat tab), but hooks and subagents don't execute there. In Chat, the `globish` skill still triggers normally; you just lose the automatic on-write check and fall back to running `scripts/check_globish.py` yourself or asking Claude to run it.
+
 ## Try it
 
 ```bash
