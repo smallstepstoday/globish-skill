@@ -1,0 +1,14 @@
+{
+  "name": "globish",
+  "owner": {
+    "name": "smallstepstoday"
+  },
+  "description": "Marketplace for the globish plugin — write documents in Jean-Paul Nerrière's simplified international English.",
+  "plugins": [
+    {
+      "name": "globish",
+      "source": "./",
+      "description": "Write every document in Globish — a ~1,500-word approved vocabulary plus plain-writing style rules, with a bundled compliance checker."
+    }
+  ]
+}

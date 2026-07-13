@@ -1,0 +1,11 @@
+{
+  "name": "globish",
+  "version": "0.1.0",
+  "description": "Write every document in Globish — Jean-Paul Nerrière's ~1,500-word simplified international English — with plain-writing style rules and a bundled compliance checker.",
+  "author": {
+    "name": "smallstepstoday"
+  },
+  "homepage": "https://github.com/smallstepstoday/globish-skill",
+  "license": "Apache-2.0",
+  "keywords": ["writing", "plain-language", "globish", "accessibility", "documentation", "editing"]
+}
