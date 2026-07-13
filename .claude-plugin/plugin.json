@@ -1,7 +1,7 @@
 {
   "name": "globish",
-  "version": "0.1.0",
-  "description": "Write every document in Globish — Jean-Paul Nerrière's ~1,500-word simplified international English — with plain-writing style rules and a bundled compliance checker.",
+  "version": "0.2.0",
+  "description": "Write every document in Globish — Jean-Paul Nerrière's ~1,500-word simplified international English — with plain-writing style rules, a bundled compliance checker, and an automatic check on every file write.",
   "author": {
     "name": "smallstepstoday"
   },

@@ -16,6 +16,7 @@ This repo is set up to do three jobs from one source of truth, so there's no dup
 .claude-plugin/plugin.json       — plugin manifest (defines the "globish" plugin's contents)
 .claude-plugin/marketplace.json  — marketplace catalog (lets people add this repo with /plugin marketplace add)
 skills/globish/                   — the skill itself — the only copy, used by all install paths below
+hooks/                             — PostToolUse hook: auto-checks prose files as Claude writes them
 examples/before_after.md          — a worked example
 CASE_STUDY.md                     — the project write-up
 ```
@@ -52,6 +53,10 @@ skills/globish/
 
 See [`examples/before_after.md`](examples/before_after.md) for a full worked example (explaining quantum physics, with and without the skill).
 
+## Automatic check on every write
+
+When installed as a plugin, `hooks/check_globish_on_write.py` runs as a `PostToolUse` hook after every `Write` or `Edit` tool call. If the file is prose (`.md`, `.markdown`, `.txt`, `.mdx`) and isn't part of the plugin's own bundled reference material, it runs the same compliance check automatically and prints a short summary — off-list word count, long-sentence count, forbidden-tense hits, idiom hits — so Claude sees it in the same turn and can offer to fix what's flagged. Clean files produce no output. Like the checker itself, the hook only reports; it never blocks the write.
+
 ## Try it
 
 ```bash
@@ -84,6 +89,7 @@ echo "Your draft text here." | python3 skills/globish/scripts/check_globish.py -
 - **The word list** is reconstructed from Nerrière's official published Globish vocabulary, supplemented with core conjugated forms of *be*, *have*, and *do* (is, am, are, was, were, been, had, did, would, could) and the article *an* — several published copies of the list omit these as "assumed" grammar, but a working checker needs them.
 - **The checker is a report, not a gate.** It's deterministic where determinism helps (vocabulary, sentence length, tense patterns) and leaves judgment calls — is this technical term unavoidable? does this sentence actually read fine at 16 words? — to Claude and the user.
 - **Irregular verbs** are handled with an explicit lookup table rather than a stemmer/lemmatizer dependency, keeping the script to the Python standard library.
+- **The hook mirrors the checker's own philosophy.** `hooks/check_globish_on_write.py` always exits `0` and never modifies or blocks a write — it only prints a summary Claude can act on. Enforcement stayed a design non-goal throughout this project; the goal is visibility at the moment a draft is written, not a lint error that stops work.
 
 ## Limitations
 

@@ -56,6 +56,8 @@ It reports, in order: words not on the approved list, sentences over 15 words, u
 
 For a `.docx`, `.pptx`, or `.pdf` deliverable, extract the text first (or draft the prose in a plain-text or markdown file alongside the real deliverable), run the checker on that, revise, and then build or update the final file using the appropriate skill (docx, pptx, pdf).
 
+If this skill is installed as part of the `globish` plugin (rather than as a standalone skill), a bundled hook runs this same check automatically after every file write to a `.md`, `.markdown`, `.txt`, or `.mdx` file and reports a short summary. Treat that summary the same way as a manual run — read it, decide what's worth fixing, and don't feel obligated to re-run the full checker by hand if the hook already flagged nothing.
+
 ## When full compliance isn't realistic
 
 Legal, medical, financial, and other specialist documents sometimes need precise technical terms that plain English can't replace without losing accuracy. In that case: keep the term, define it the first time it appears in the plain words available, and keep the surrounding sentences as Globish-compliant as possible. Tell the user which terms you kept outside the list and why, so they can confirm that's the right call for that document.
