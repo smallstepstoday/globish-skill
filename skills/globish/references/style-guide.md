@@ -49,13 +49,28 @@ Globish uses ordinary tenses (simple present, simple past, simple future, presen
 
 Where the approved word list offers a concrete option, use it over an abstract one. "The machine stopped" beats "operational cessation occurred." Concrete nouns and verbs are easier to picture and easier to translate.
 
-## 8. Numbers, names, and technical terms
+## 8. Numbers, names, and essential technical terms
 
-Numerals, proper nouns (people, places, companies, products), and essential technical or domain terms are always allowed, even though they aren't on the word list — Globish was never meant to erase a company name or a chemical formula. Define any technical term the first time it appears, in plain words drawn from the approved list where possible.
+Numerals, proper nouns (people, places, companies, products), and essential technical or domain terms are always allowed, even though they aren't on the word list — Globish was never meant to erase a company name or a chemical formula.
+
+State the technical term as soon as you need it. Give the plain definition in the sentence right after. Never describe the concept first and reveal the term at the end — the reader has to carry an unnamed idea, which is harder to translate than a hard word.
+
+**Not Globish:** "Some Israeli officials say they want full, permanent Israeli control of this land. Groups that watch human rights call this a step toward that goal. The word for that step is annexation."
+
+**Globish:** "Some Israeli officials say they want full, permanent Israeli annexation of this land. Annexation means taking control of land by force. Groups that watch human rights call this a step toward that goal."
+
+An essential technical term must satisfy all three of the following tests:
+
+1. It has one precise, load-bearing meaning in this domain (legal, medical, financial, technical).
+2. No single approved-list word carries that same precision without losing accuracy.
+3. The reader needs the exact term itself (to act on it, look it up, or match it elsewhere), not just the idea behind it.
+
+If a plain word already says it accurately, use the plain word — don't define one that isn't necessary.
 
 ## Quick self-check before delivering a document
 
 1. Read it aloud. If a sentence needs a breath partway through, split it.
 2. Underline every verb. Is it active? Rewrite any passive construction.
-3. Search for "to," "up," "out," "off," "on," "into," "over" right after a verb — that's often a phrasal verb hiding a simpler word.
-4. Run `scripts/check_globish.py` against the draft and review the flagged words and sentences.
+3. For each technical term, confirm the definition sits immediately after it, not several sentences later.
+4. Search for "to," "up," "out," "off," "on," "into," "over" right after a verb — that's often a phrasal verb hiding a simpler word.
+5. Run `scripts/check_globish.py` against the draft and review the flagged words and sentences.
