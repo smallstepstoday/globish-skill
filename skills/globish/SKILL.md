@@ -1,11 +1,11 @@
 ---
 name: globish
-description: Write or rewrite any document, report, memo, email, article, slide deck, or other prose deliverable using the Globish framework — Jean-Paul Nerrière's simplified international English, built on a ~1,500-word approved vocabulary and strict plain-writing rules (short sentences, active voice, no idioms, no phrasal verbs, no cultural references). Use this skill automatically for every document Claude creates or substantially edits in Cowork or chat, even if the user does not say "Globish" by name — it governs the language of all written deliverables. Also trigger on requests to "simplify this," "write in plain English," "make this understandable for non-native speakers," "check this against the word list," or "make it Globish."
+description: Write or rewrite a document, report, memo, email, article, slide deck, or other prose deliverable using the Globish framework — Jean-Paul Nerrière's simplified international English, built on a ~1,500-word approved vocabulary and strict plain-writing rules (short sentences, active voice, no idioms, no phrasal verbs, no cultural references). Trigger only on an explicit request naming Globish or plain-language rewriting — e.g. "write this in Globish," "simplify this," "write in plain English," "make this understandable for non-native speakers," "check this against the word list," or "make it Globish." Do not use automatically on documents the user hasn't flagged this way, and do not apply to code, code comments, or config/markup files.
 ---
 
 # Globish
 
-Globish is a controlled subset of English designed so that any two non-native speakers, anywhere in the world, can read the same document and understand it the same way. It restricts vocabulary to roughly 1,500 common root words and enforces plain grammar: short sentences, active voice, no idioms, no cultural references. This skill makes that the default language for every document this account produces.
+Globish is a controlled subset of English designed so that any two non-native speakers, anywhere in the world, can read the same document and understand it the same way. It restricts vocabulary to roughly 1,500 common root words and enforces plain grammar: short sentences, active voice, no idioms, no cultural references. Use it when the user asks for a document in Globish or plain language.
 
 ## Workflow
 
